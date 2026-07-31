@@ -129,8 +129,64 @@ export const HomePage = () => {
         </div>
       </main>
 
-      <footer className="mt-24 py-12 border-t border-slate-200 text-center text-slate-500">
-        <p>&copy; 2026 MeterPower NG. All rights reserved.</p>
+      {/* New Sections */}
+      <section className="max-w-7xl mx-auto mt-32 px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
+          <img
+            src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Electricity Power Lines"
+            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+        <div className="space-y-6">
+          <span className="text-emerald-600 font-bold tracking-widest uppercase text-sm">Reliable Infrastructure</span>
+          <h2 className="text-5xl font-extrabold text-slate-900 leading-tight">Seamless Electricity Vending</h2>
+          <p className="text-xl text-slate-600">VoltPay bridges the gap between you and your utility provider. Experience lightning-fast token generation without leaving your couch, backed by robust grid infrastructure.</p>
+          <div className="grid grid-cols-2 gap-6 pt-4">
+            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="text-3xl mb-2">⚡</div>
+              <p className="font-bold">Secure Payments</p>
+            </div>
+            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div className="text-3xl mb-2">🌍</div>
+              <p className="font-bold">All DISCOs Included</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto mt-32 px-6 py-20 bg-emerald-50 rounded-3xl text-center">
+        <h2 className="text-4xl font-extrabold mb-6">Need Assistance?</h2>
+        <p className="text-lg text-emerald-900 mb-8 max-w-2xl mx-auto">Our dedicated support team is available around the clock to help you with any issues regarding your token or meter.</p>
+        <button className="bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-emerald-700">Contact Support</button>
+      </section>
+
+      <footer className="mt-32 py-16 bg-slate-900 text-slate-400">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+          <div>
+            <h3 className="text-white font-bold text-xl mb-4">VoltPay Ltd</h3>
+            <p className="text-sm">Powering homes across Nigeria with reliable energy solutions.</p>
+          </div>
+          <div>
+            <h3 className="text-white font-bold mb-4">Services</h3>
+            <ul className="space-y-2 text-sm">
+              <li>Prepaid Token</li>
+              <li>Meter Verification</li>
+              <li>Bill History</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white font-bold mb-4">Support</h3>
+            <ul className="space-y-2 text-sm">
+              <li>Help Center</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+            </ul>
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+          &copy; 2026 VoltPay Ltd. All rights reserved.
+        </div>
       </footer>
 
       {transaction && <TokenDisplayModal transaction={transaction} onClose={() => setTransaction(null)} />}
